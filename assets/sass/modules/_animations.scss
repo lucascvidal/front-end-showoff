@@ -39,3 +39,13 @@
     transform: rotate(0deg);
   }
 }
+
+@keyframes show-image {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 20%;
+  }
+}
