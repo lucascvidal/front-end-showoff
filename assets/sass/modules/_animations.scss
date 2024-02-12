@@ -49,3 +49,37 @@
     opacity: 20%;
   }
 }
+
+@keyframes cover-text {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 120px;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 100;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100;
+  }
+}
+
+@keyframes move-to-end {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 120px;
+  }
+}

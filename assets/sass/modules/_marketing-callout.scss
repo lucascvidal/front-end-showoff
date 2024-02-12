@@ -1,4 +1,71 @@
 .marketing-callout {
   text-align: center;
   margin: 136px 0;
+
+  h1 {
+    font-family: $secondary-font-family;
+    color: $primary-color;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+  }
+
+  h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    width: 480px;
+    margin: 0 auto;
+    line-height: 1.2;
+    margin-bottom: 48px;
+    position: relative;
+  }
+
+  p {
+    font-family: $secondary-font-family;
+    width: 480px;
+    margin: 0 auto 36px;
+  }
+
+  h3 {
+    font-family: $secondary-font-family;
+    color: $primary-color;
+    text-transform: uppercase;
+  }
+}
+
+.animated-cursor {
+  width: 0px;
+  height: 47px;
+  background-color: rgba($color: $primary-color, $alpha: 0.50);
+  position: absolute;
+  left: 274px;
+  top: 120px;
+  z-index: -1;
+  animation: cover-text 3s 1s forwards;
+}
+
+.cursor-line {
+  width: 3px;
+  height: 100%;
+  background-color: $primary-color;
+  position: relative;
+  animation: blink 1s ease 0s 8, move-to-end 3s ease 1s forwards;
+
+  &::after {
+    content: "This is the key.";
+    color: $white;
+    background-color: $primary-color;
+    font-size: .75rem;
+    line-height: 1.5rem;
+    width: 100px;
+    display: block;
+    border-radius: 0 2px 2px 0;
+  }
+}
+
+.cursor-message {
+  font-size: 1rem;
+  color: $white;
+  background-color: $primary-color;
+  display: inline;
 }
