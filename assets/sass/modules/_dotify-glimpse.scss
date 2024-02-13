@@ -7,6 +7,7 @@
     position: relative;
     left: 450px;
     opacity: 0;
+    margin-right: 12px;
   }
 
   .right-menu {
@@ -14,10 +15,110 @@
     position: relative;
     left: -450px;
     opacity: 0;
+    margin-left: 12px;
   }
 
   .center-menu {
     animation: slide-from-center-top 1s ease 2s forwards;
     opacity: 0;
+  }
+}
+
+.nav-icon-link {
+  font-size: 1rem;
+  color: $gray;
+  text-decoration: none;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  line-height: 2;
+
+  svg {
+    margin-right: 12px;
+    fill: $gray;
+
+    path {
+      fill: $gray
+    }
+  }
+}
+
+.dotify-component {
+  background-color: $light-gray;
+  padding: 12px 24px;
+  border-radius: 4px;
+}
+
+.dotify-library-headers {
+  margin-top: 12px;
+  border-radius: 4px 4px 0 0;
+}
+
+.filters {
+  margin-top: 24px;
+
+  p {
+    background-color: $secondary-light-gray;
+    color: $gray;
+    line-height: 1.33;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: inline-block;
+    padding: 4px 12px;
+  }
+}
+
+.recent-items {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: $gray;
+  margin-top: 12px;
+  
+  svg {
+    margin-left: 12px;
+    fill: $gray;
+
+    path {
+      fill: $gray;
+    }
+  }
+}
+
+.dotify-library-albums {
+  border-radius: 0 0 4px 4px;
+
+  li {
+    display: grid;
+    grid-template-columns: 48px calc(100% - 48px);
+    grid-template-areas:
+    "cover album"
+    "cover artist"
+    ;
+    column-gap: 12px;
+    margin-bottom: 12px;
+
+    img {
+      width: 48px;
+      grid-area: cover;
+      border-radius: 4px;
+    }
+
+    h4 {
+      grid-area: album;
+      color: $black;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    h5 {
+      grid-area: artist;
+      font-size: .875rem;
+      font-weight: 400;
+      color: $secondary-gray;
+    }
   }
 }

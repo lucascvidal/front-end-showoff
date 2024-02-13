@@ -18,6 +18,7 @@
     line-height: 1.2;
     margin-bottom: 48px;
     position: relative;
+    z-index: 2;
   }
 
   p {
@@ -57,9 +58,13 @@
     background-color: $primary-color;
     font-size: .75rem;
     line-height: 1.5rem;
-    width: 100px;
+    width: 0;
+    height: 1.5rem;
+    overflow: hidden;
     display: block;
     border-radius: 0 2px 2px 0;
+    animation: cover-text 3s 4s forwards;
+    position: relative;
   }
 }
 
