@@ -165,3 +165,50 @@
     }
   }
 }
+
+.controls {
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+
+  .left-controls {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 24px;
+
+      &:first-child {
+        fill: $primary-color;
+
+        path {
+          fill: $primary-color;
+        }
+      }
+
+      &:not(:first-child) {
+        fill: $gray;
+
+        path {
+          fill: $gray;
+        }
+      }
+    }
+  }
+
+  .right-controls {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    color: $gray;
+
+    svg {
+      margin-left: 12px;
+      fill: $gray;
+
+      path {
+        fill: $gray;
+      }
+    }
+  }
+}
