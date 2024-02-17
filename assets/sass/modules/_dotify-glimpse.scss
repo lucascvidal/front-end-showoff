@@ -300,6 +300,7 @@
     font-size: 1rem;
     color: $black;
     font-weight: 700;
+    margin-bottom: 12px;
   }
 
   > img { 
@@ -331,5 +332,88 @@
   > h6 {
     font-size: 1rem;
     color: $gray;
+  }
+}
+
+.about-the-artist {
+  margin-top: 12px;
+  position: relative;
+
+  img {
+    width: 252px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .white-overlay {
+    background: linear-gradient($tertiary-light-gray, transparent);
+    border-radius: 8px;
+    width: 252px;
+    height: 163px;
+    position: absolute;
+    top: 0;
+    padding: 12px;
+
+    > p {
+      color: $black;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+  }
+
+  .artist-description {
+    padding: 12px;
+    background-color: $quaternary-light-gray;
+    position: relative;
+    top: -8px;
+    border-radius: 0 0 8px 8px;
+
+    h4 {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: $black;
+      margin: 12px 0;
+    }
+
+    p:first-of-type {
+      font-size: 0.75rem;
+      color: $gray;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+        display: inline-block;
+        padding: 0 12px;
+        color: $black;
+        border: 1px solid $gray;
+        line-height: 1.25rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        border-radius: 12px;
+      }
+    }
+
+    p {
+      font-size: 0.625rem;
+      margin-top: 12px;
+    }
+  }
+}
+
+.credits {
+  font-weight: 700;
+  color: $black;
+  font-size: 0.75rem;
+  padding: 12px;
+  background-color: $quaternary-light-gray;
+  border-radius: 8px;
+
+  li {
+    margin-top: 12px;
+  }
+
+  p:nth-child(2) {
+    color: $gray;
+    font-size: 0.625rem;
   }
 }
