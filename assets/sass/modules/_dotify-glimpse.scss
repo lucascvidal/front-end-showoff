@@ -284,3 +284,52 @@
     }
   }
 }
+
+.copyright {
+  color: $gray;
+  font-size: .875rem;
+  margin: 24px 16px;
+
+  > p:not(:first-child) {
+    font-size: 0.75rem;
+  }
+}
+
+.right-menu {
+  > h4 {
+    font-size: 1rem;
+    color: $black;
+    font-weight: 700;
+  }
+
+  > img { 
+    width: 252px;
+    border-radius: 8px;
+  }
+
+  > h5 {
+    color: black;
+    font-size: 1.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+
+    svg {
+      fill: $gray;
+      width: 24px;
+
+      &:first-of-type {
+        margin-left: 16px;
+      }
+
+      path {
+        fill: $gray;
+      }
+    }
+  }
+
+  > h6 {
+    font-size: 1rem;
+    color: $gray;
+  }
+}
