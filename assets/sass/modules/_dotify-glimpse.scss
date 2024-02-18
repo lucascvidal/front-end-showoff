@@ -429,12 +429,12 @@
   .player-album-info {
     margin-right: auto;
     display: grid;
-    grid-template-columns: 48px calc(100% - 48px - 24px) 24px;
     grid-template-areas:
     "cover album add"
     "cover artist add"
     ;
     column-gap: 12px;
+    width: 264px;
     
     img {
       grid-area: cover;

@@ -1,0 +1,38 @@
+.activity-feed {
+  padding: 12px;
+  margin-top: 36px;
+
+  > div {
+    
+    p {
+      color: $black;
+      font-weight: 700;
+      padding: 12px;
+      background-color: $light-gray;
+      border-radius: 8px;
+      width: 252px;
+      margin-bottom: 12px;
+    }
+
+    &:nth-child(odd) {
+      margin-left: calc(50% - 1px);
+      border-left: 1px solid $light-gray;
+
+      p {
+        margin-left: 12px;
+      }
+    }
+    
+    &:nth-child(even) {
+      display: flex;
+      justify-content: end;
+      width: 50%;
+      border-right: 1px solid $light-gray;
+      
+      p {
+        margin-right: 12px;
+        text-align: right;
+      }
+    }
+  }
+}
