@@ -3,7 +3,8 @@
   margin-top: 36px;
 
   > div {
-    
+    padding-bottom: 12px;
+
     p {
       color: $black;
       font-weight: 700;
@@ -11,7 +12,6 @@
       background-color: $light-gray;
       border-radius: 8px;
       width: 252px;
-      margin-bottom: 12px;
     }
 
     &:nth-child(odd) {

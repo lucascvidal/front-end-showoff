@@ -1,0 +1,35 @@
+.footer-links {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+
+  li {
+    margin-top: 24px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: $primary-color;
+
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+  
+      svg {
+        margin-right: 12px;
+  
+        fill: $primary-color;
+  
+        path {
+          fill: $primary-color;
+        }
+      }
+    }
+  } 
+}
+
+footer {
+  padding: 36px 0;
+  border-top: 2px solid $light-gray;
+}
