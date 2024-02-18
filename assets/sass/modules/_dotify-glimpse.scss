@@ -1,6 +1,6 @@
 .dotify-glimpse {
   display: flex;
-  margin: 16px 0;
+  margin: 16px 0 0;
 
   .left-menu {
     animation: slide-from-center-top 1s 0s forwards, slide-from-center-to-left 1s 1s forwards;
@@ -415,5 +415,106 @@
   p:nth-child(2) {
     color: $gray;
     font-size: 0.625rem;
+  }
+}
+
+.audio-player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background-color: $white;
+  border-top: 1px solid $tertiary-light-gray;
+
+  .player-album-info {
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 48px calc(100% - 48px - 24px) 24px;
+    grid-template-areas:
+    "cover album add"
+    "cover artist add"
+    ;
+    column-gap: 12px;
+    
+    img {
+      grid-area: cover;
+      width: 48px;
+      border-radius: 4px;
+    }
+
+    h4 {
+      grid-area: album;
+      color: $black;
+      font-weight: 700;
+      font-size: 0.875rem;
+    }
+    
+    h5 {
+      grid-area: artist;
+      font-size: 0.875rem;
+      color: $gray;
+    }
+
+    svg {
+      grid-area: add;
+      margin: auto;
+    }
+  }
+
+  .player-controls {
+    width: 488px;
+
+    > div:first-child {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      *:not(:last-child) {
+        margin-right: 12px;
+      }
+
+      .previous {
+        transform: rotate(180deg);
+      }
+    }
+
+    > div:nth-child(2) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.625rem;
+
+      > div {
+        background-color: $light-gray;
+        width: 420px;
+        height: 3px;
+        position: relative;
+        margin: 0 12px;
+
+        &:after {
+          content: "";
+          width: 324px;
+          height: 3px;
+          background-color: $gray;
+          position: absolute;
+        }
+      }
+    }
+  }
+
+  .additional-controls {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    *:not(:last-child) {
+      margin-right: 12px;
+    }
+
+    .volume-up {
+      width: 84px;
+      height: 3px;
+      background-color: $gray;
+    }
   }
 }
