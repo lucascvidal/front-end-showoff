@@ -48,11 +48,16 @@
     border-radius: 4px;
 
     &:hover {
+      background-color: $primary-color;
+      color: $white;
+      
       &::before {
+        background-color: $primary-color;
         height: 0;
       }
-
+      
       &::after {
+        background-color: $primary-color;
         width: 0;
       }
     }

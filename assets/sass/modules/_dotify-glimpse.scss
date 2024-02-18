@@ -1,6 +1,7 @@
 .dotify-glimpse {
   display: flex;
   margin: 16px 0 0;
+  transition: all ease 1s;
 
   .left-menu {
     animation: slide-from-center-top 1s 0s forwards, slide-from-center-to-left 1s 1s forwards;
