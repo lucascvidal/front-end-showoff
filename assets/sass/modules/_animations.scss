@@ -83,3 +83,25 @@
     left: 120px;
   }
 }
+
+@keyframes bar-up-and-down {
+  from {
+    height: 0px;
+  }
+
+  25% {
+    height: 10px;
+  }
+
+  50% {
+    height: 0px;
+  }
+
+  75% {
+    height: 10px;
+  }
+
+  to {
+    height: 0px;
+  }
+}
