@@ -94,13 +94,14 @@
 
   li {
     display: grid;
-    grid-template-columns: 48px calc(100% - 48px);
+    grid-template-columns: 48px 148px 24px;
     grid-template-areas:
-    "cover album"
-    "cover artist"
+    "cover album icon"
+    "cover artist icon"
     ;
     column-gap: 12px;
     margin-bottom: 12px;
+    transition: all 0.3s;
 
     img {
       width: 48px;
@@ -120,6 +121,32 @@
       font-size: .75rem;
       font-weight: 400;
       color: $secondary-gray;
+    }
+
+    svg {
+      grid-area: icon;
+      fill: $primary-color;
+      margin: auto;
+      visibility: hidden;
+
+      path {
+        fill: $primary-color;
+      }
+    }
+
+    &:hover {
+      background-color: $secondary-light-gray;
+      border-radius: 4px;
+    }
+
+    &.active {
+      h4 {
+        color: $primary-color;
+      }
+
+      svg {
+        visibility: visible;
+      }
     }
   }
 }
@@ -175,6 +202,11 @@
 
     svg {
       margin-right: 24px;
+      transition: all 0.1s;
+
+      path {
+        transition: all 0.1s;
+      }
 
       &:first-child {
         fill: $primary-color;
@@ -189,6 +221,14 @@
 
         path {
           fill: $gray;
+        }
+      }
+
+      &:hover {
+        fill: $primary-color;
+
+        path {
+          fill: $primary-color;
         }
       }
     }
@@ -250,6 +290,23 @@
   transition: background-color ease .3s;
 
   &.active {
+    &:hover {
+      p.equalizer {
+        span {
+          &.first-bar, &.second-bar {
+            height: 10px;
+            animation: none;
+            transform: initial;
+            position: initial;
+          }
+
+          &.third-bar {
+            display: none;
+          }
+        }
+      }
+    }
+
     p.equalizer {
       display: block;
       width: 48px;
@@ -260,6 +317,7 @@
         width: 2px;
         animation: bar-up-and-down 2s 0s infinite;
         background-color: $primary-color;
+
 
         &.first-bar {
           height: 10px;
@@ -281,7 +339,7 @@
   }
   
   &:hover {
-    background-color: $quaternary-light-gray;
+    background-color: $secondary-light-gray;
     border-radius: 4px;
 
     p.equalizer {
@@ -293,7 +351,7 @@
         display: inline-block;
         width: 2px;
         height: 10px;
-        background-color: $gray;
+        background-color: $first-gray-gradient;
 
         &.first-bar {
           transform: rotate(120deg);
@@ -367,11 +425,19 @@
 }
 
 .right-menu {
+  * {
+    transition: all 0.3s;
+  }
+
   > h4 {
     font-size: 1rem;
     color: $black;
     font-weight: 700;
     margin-bottom: 12px;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   > img { 
@@ -385,6 +451,10 @@
     font-weight: 700;
     display: flex;
     align-items: center;
+
+    &:hover {
+      text-decoration: underline;
+    }
 
     svg {
       fill: $gray;
@@ -403,6 +473,10 @@
   > h6 {
     font-size: 1rem;
     color: $gray;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -443,6 +517,11 @@
       font-weight: 700;
       color: $black;
       margin: 12px 0;
+
+      
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     p:first-of-type {
@@ -461,6 +540,12 @@
         font-size: 0.75rem;
         font-weight: 700;
         border-radius: 12px;
+
+            
+        &:hover {
+          font-size: 0.8rem;
+          border-color: $secondary-gray;
+        }
       }
     }
 
@@ -587,5 +672,34 @@
       height: 3px;
       background-color: $gray;
     }
+  }
+
+  
+  svg {
+    transition: all 0.1s;
+
+    path {
+      transition: all 0.1s;
+
+      &:hover {
+        fill: $primary-color;
+      }
+    }
+
+    &:hover {
+      fill: $primary-color;
+
+      path {
+        fill: $primary-color;
+      }
+    }
+  }
+}
+
+svg.active {
+  fill: $primary-color;
+
+  path {
+    fill: $primary-color;
   }
 }
