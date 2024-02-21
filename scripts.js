@@ -15,6 +15,10 @@ window.onload = () => {
       let dotifyGlimpseSection = document.querySelector(".dotify-glimpse");
       dotifyGlimpseSection.classList.toggle("height-zero");
       dotifyGlimpseSection.classList.toggle("opacity-zero");
+
+      let audioPlayer = document.querySelector(".audio-player");
+      audioPlayer.classList.toggle("height-zero");
+      audioPlayer.classList.toggle("opacity-zero");
     });
   }
 };
