@@ -1,24 +1,40 @@
 .activity-feed {
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
-  position: relative;
-
-  background: radial-gradient(circle, $primary-color-transparent, $first-gray-gradient-transparent, $second-gray-gradient-transparent, $shadow-gray-transparent, $white);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
+  height: 800px;
+  perspective: 400px;
+  color: $primary-color;
+  font-size: 82px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: justify;
 }
 
-.activity-feed > div {
-  opacity: 0;
-  position: absolute;
-}
+.crawl {
+  transform-origin: 50% 100%;
+  animation: crawl 80s linear forwards;
 
-@for $i from 1 through $total-items {
-  .activity-feed > div:nth-child(#{$i}) {
-    animation: fadeInOut #{$visible-duration + $transition-duration} ease-in-out #{($visible-duration + $transition-duration) * ($i - 1)} forwards;
+  &:hover {
+    animation-play-state: paused;
+    cursor: grabbing;
+  }
+
+  p {
+    margin-bottom: 82px;
+  }
+
+  > div {
+    text-align: center;
+    margin-bottom: 82px;
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 90%;
+    }
+
+    h2 {
+      font-size: 110%;
+    }
   }
 }
-
