@@ -15,3 +15,15 @@ $secondary-gray: #595959;
 $first-gray-gradient: #C5C5C5;
 $second-gray-gradient: #E1E1E1;
 $shadow-gray: #EDEDED;
+
+$opacity: 0.05;
+$primary-color-transparent: rgba($primary-color, $opacity);
+$first-gray-gradient-transparent: rgba($first-gray-gradient, $opacity);
+$second-gray-gradient-transparent: rgba($second-gray-gradient, $opacity);
+$shadow-gray-transparent: rgba($shadow-gray, $opacity);
+
+$total-items: 7;
+$visible-duration: 5s;
+$fade-in-duration: 1s;
+$fade-out-duration: 1s;
+$transition-duration: $fade-in-duration + $fade-out-duration;

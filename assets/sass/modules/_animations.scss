@@ -105,3 +105,8 @@
     height: 0px;
   }
 }
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  #{percentage($fade-in-duration / ($visible-duration + $transition-duration))}, #{100 - percentage($fade-out-duration / ($visible-duration + $transition-duration))} { opacity: 1; }
+}

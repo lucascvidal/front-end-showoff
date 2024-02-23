@@ -1,38 +1,20 @@
 .activity-feed {
-  padding: 12px;
-  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
 
-  > div {
-    padding-bottom: 12px;
+.activity-feed > div {
+  opacity: 0;
+  position: absolute;
+}
 
-    p {
-      color: $gray;
-      font-weight: 700;
-      padding: 12px;
-      background-color: $light-gray;
-      border-radius: 8px;
-      width: 252px;
-    }
-
-    &:nth-child(odd) {
-      margin-left: calc(50% - 1px);
-      border-left: 1px solid $light-gray;
-
-      p {
-        margin-left: 12px;
-      }
-    }
-    
-    &:nth-child(even) {
-      display: flex;
-      justify-content: end;
-      width: 50%;
-      border-right: 1px solid $light-gray;
-      
-      p {
-        margin-right: 12px;
-        text-align: right;
-      }
-    }
+@for $i from 1 through $total-items {
+  .activity-feed > div:nth-child(#{$i}) {
+    animation: fadeInOut #{$visible-duration + $transition-duration} ease-in-out #{($visible-duration + $transition-duration) * ($i - 1)} forwards;
   }
 }
+
