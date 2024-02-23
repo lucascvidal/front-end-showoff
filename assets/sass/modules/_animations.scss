@@ -110,3 +110,15 @@
   0%, 100% { opacity: 0; }
   #{percentage($fade-in-duration / ($visible-duration + $transition-duration))}, #{100 - percentage($fade-out-duration / ($visible-duration + $transition-duration))} { opacity: 1; }
 }
+
+@keyframes gradientBG {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
