@@ -4,6 +4,8 @@
   height: 800px;
   position: relative;
   transition: all ease 1s;
+  margin: auto;
+  border-radius: 8px;
   
   &:before {
     content: " ";

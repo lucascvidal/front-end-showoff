@@ -1,5 +1,4 @@
-@import 
-"variables",
+@import "variables",
 "fonts",
 "base",
 "layout",
@@ -8,4 +7,32 @@
 "modules/marketing-callout",
 "modules/dotify-glimpse",
 "modules/feed",
-"modules/footer";
+"modules/footer",
+"modules/modal";
+
+p.media-warning {
+  display: none;
+  margin: auto;
+  color: $primary-color;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.5;
+  text-align: center;
+  padding: 24px 12px;
+}
+
+@media screen and (max-width: 1199px) {
+
+  header,
+  section.dotify-glimpse,
+  aside.audio-player,
+  section.activity-feed,
+  footer {
+    display: none;
+  }
+
+  p.media-warning {
+    display: block;
+  }
+}
+

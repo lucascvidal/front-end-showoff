@@ -4,6 +4,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const activityFeed = document.querySelector(".activity-feed .crawl");
   activityFeed.addEventListener("animationend", handleAnimationEnd);
+
+  const glimpseSection = document.querySelector(".dotify-glimpse");
+
+  const modal = document.getElementById("infoModal");
+  const closeButton = document.querySelector(".close-button");
+
+  glimpseSection.addEventListener("click", function() {
+    modal.style.display = "block";
+  });
+
+  closeButton.addEventListener("click", function() {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  });
 });
 
 function handleAnimationEnd() {
@@ -40,4 +59,13 @@ function hideMarketingCallout() {
     audioPlayer.classList.add("visible");
     footer.classList.add("visible");
   }, 1000);
+}
+
+function showModal() {
+  const modal = document.querySelector(".modal");
+  modal.classList.remove(".display-none");
+
+  setTimeout(() => {
+    modal.classList.add(".display-none");
+  }, 5000);
 }
