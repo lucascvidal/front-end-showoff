@@ -8,7 +8,7 @@
     margin-top: 24px;
     font-size: 1rem;
     font-weight: 700;
-    color: $primary-color;
+    color: $gray;
 
     a {
       display: flex;
@@ -24,6 +24,11 @@
         path {
           fill: $primary-color;
         }
+      }
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
       }
     }
   } 
