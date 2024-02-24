@@ -114,3 +114,29 @@
     transform: rotateX(25deg) translateY(-9450px);
   }
 }
+
+@keyframes tremble {
+  0%, 45%, 70%, 100% {
+    transform: rotate(0deg) translateY(0px);
+  }
+
+  50% {
+    transform: rotate(-2.5deg);
+  }
+
+  55% {
+    transform: rotate(2.5deg);
+  }
+
+  60% {
+    transform: translateY(20px);
+  }
+
+  62.5% {
+    transform: translateY(0px);
+  }
+
+  65% {
+    transform: translateY(10px);
+  }
+}

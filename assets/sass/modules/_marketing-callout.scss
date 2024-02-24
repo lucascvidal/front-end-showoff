@@ -46,6 +46,7 @@
     background-color: $white;
     box-shadow: 0 0 16px 8px $white;
     border-radius: 4px;
+    animation: tremble 5s linear 5s infinite;
 
     &:hover {
       background-color: $primary-color;
@@ -71,12 +72,12 @@
     }
     
     &::before {
-      height: 44px;
+      height: 46px;
       width: 136px;
     }
     
     &::after {
-      width: 156px;
+      width: 158px;
       height: 24px;
     }
   }

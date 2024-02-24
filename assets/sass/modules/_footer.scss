@@ -32,4 +32,5 @@
 footer {
   padding: 36px 0;
   border-top: 2px solid $light-gray;
+  transition: max-height 1s;
 }
