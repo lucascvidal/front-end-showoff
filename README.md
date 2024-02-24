@@ -10,7 +10,7 @@ Then I realized I actually had the talent for coding everything the designers th
 
 That is were this project comes in. This is a Spotify clone, with a few touches of interesting bits I encountered during my days as a software developer. I wanted to mix stuff commonly present in applications development with animations, which are often left aside because of the extra time needed to implement them.
 
-I hope you enjoyed seeing and reading this.
+I hope you enjoy seeing and reading this.
 
 ## Development information
 
@@ -23,4 +23,14 @@ sass styles.scss styles.css
 
 ## What I Learned
 
-Nothing yet to write here.
+I learned a few things, like using the animationend and transitionend JavaScript events. I learned how to implement a Star Wars opening style animation (which was simple, but nice). It was also the first time I seriously used the display: grid CSS property, which was kind of cryptic to me before this project, and now is much more familiar. I also wanted to use as much vanilla HTML, CSS and JS as I could for the animations, which were the main topic to be worked on with this project, and I think I have managed to do just that.
+
+## Suggestions on what to implement
+
+At this moment, this Spotify clone cannot play music. One thing I might implement in the future (or maybe not) is a functional audio player. If you want to try it on your own, here's what I would expect from the implementation:
+1. Find royalty-free songs for all the albums present in the interface (12 is the count);
+1. Put them in the assets folder, creating a songs directory;
+1. Write the metadata for the album and artist on a JSON file;
+1. As the user clicks on any album link on the left side menu (library items), replace the information show on the central and right menu with the metadata from the JSON file;
+1. If the user clicks on any song on the central menu, the audio player should start playing this song;
+1. Use audio tags for the audio player and the JavaScript audio API to make things work correctly when the user chooses an album or a song from this album.
