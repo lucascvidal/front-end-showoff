@@ -634,7 +634,9 @@
   padding: 12px;
   background-color: $white;
   border-top: 1px solid $tertiary-light-gray;
-
+  animation: slide-from-center-bottom 1s ease 2s forwards;
+  opacity: 0;
+  
   .player-album-info {
     margin-right: auto;
     display: grid;

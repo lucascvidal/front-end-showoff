@@ -10,6 +10,18 @@
   }
 }
 
+@keyframes slide-from-center-bottom {
+  from {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 100%;
+  }
+}
+
 @keyframes slide-from-center-to-right {
   from {
     transform: translateX(-0);
